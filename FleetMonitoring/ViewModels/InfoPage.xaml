@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FleetMonitoring.ViewModels.InfoPage"
+             Title="InfoPage">
+    <Grid
+        RowSpacing="25"
+        ColumnSpacing="25"
+        Padding="30,0"
+        BackgroundColor="Black"
+        WidthRequest="1000"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="625" />
+        <RowDefinition Height="50" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="450" />
+        <ColumnDefinition Width="450" />
+    </Grid.ColumnDefinitions>
+
+    <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Text="FleetMonitoring 1.0" FontSize="38" />
+
+    <Button x:Name="Back" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" WidthRequest="450" Text="Back" Clicked="Back_Clicked"/>
+    </Grid>
+
+</ContentPage>

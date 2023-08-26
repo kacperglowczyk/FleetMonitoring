@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FleetMonitoring.ViewModels.ViewDriverPage"
+             Title="ViewDriverPage">
+    <Grid
+        RowSpacing="25"
+        ColumnSpacing="25"
+        Padding="30,0"
+        BackgroundColor="Black"
+        WidthRequest="1000"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="625" />
+        <RowDefinition Height="50" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="450" />
+        <ColumnDefinition Width="450" />
+    </Grid.ColumnDefinitions>
+
+    <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Text="Drivers" FontSize="38" />
+        <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="DriverListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding DriverName}" 
+                              Detail="{Binding DriverSurname}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    <Button x:Name="Back" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" WidthRequest="450" Text="Back" Clicked="Back_Clicked"/>
+    <Button x:Name="AddDriver" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" WidthRequest="450" Text="Add driver" />
+    </Grid>
+
+</ContentPage>

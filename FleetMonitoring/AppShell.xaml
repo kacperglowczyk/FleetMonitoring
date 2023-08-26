@@ -4,12 +4,37 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:FleetMonitoring"
+    xmlns:views="clr-namespace:FleetMonitoring.ViewModels"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Login page"
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="login"/>
+
+    <ShellContent
+        Title="Dashboard"
+        ContentTemplate="{DataTemplate views:DashboardPage}"
+        Route="dashboard"/>
+
+    <ShellContent
+        Title="AddRecord"
+        ContentTemplate="{DataTemplate views:AddRecordPage}"
+        Route="add_record"/>
+
+    <ShellContent
+        Title="ViewRecord"
+        ContentTemplate="{DataTemplate views:ViewRecordPage}"
+        Route="view_record"/>
+
+    <ShellContent
+        Title="ViewDriver"
+        ContentTemplate="{DataTemplate views:ViewDriverPage}"
+        Route="view_employee"/>
+
+    <ShellContent
+        Title="ViewInfo"
+        ContentTemplate="{DataTemplate views:InfoPage}"
+        Route="view_info"/>
 
 </Shell>
-

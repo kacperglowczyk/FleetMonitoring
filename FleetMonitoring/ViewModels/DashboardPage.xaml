@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FleetMonitoring.ViewModels.DashboardPage"
+             Title="DashboardPage">
+<Grid
+        RowSpacing="25"
+        ColumnSpacing="25"
+        Padding="30,0"
+        BackgroundColor="Black"
+        WidthRequest="1000"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="300" />
+        <RowDefinition Height="300" />
+        <RowDefinition Height="50" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="450" />
+        <ColumnDefinition Width="450" />
+    </Grid.ColumnDefinitions>
+
+    <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Text="Main Page" FontSize="38" />
+
+    <Frame Grid.Row="1" Grid.Column="0" Padding="16" Margin="8" CornerRadius="8" BorderColor="Gray" BackgroundColor="Black">
+        <StackLayout Padding="5" Spacing="35" VerticalOptions="Center">
+            <Label Text="Fleet Monitoring" FontSize="32" FontAttributes="Bold" />
+            <Button x:Name="DashboardAddRecordBtn" Text="Select" VerticalOptions="Center" Clicked="DashboardAddRecordBtn_Clicked"/>
+        </StackLayout>
+    </Frame>
+
+    <Frame Grid.Row="1" Grid.Column="1" Padding="16" Margin="8" CornerRadius="8" BorderColor="Gray" BackgroundColor="Black">
+        <StackLayout Padding="5" Spacing="35" VerticalOptions="Center">
+            <Label Text="View Trips" FontSize="32" FontAttributes="Bold" />
+            <Button x:Name="DashboardViewRecordBtn" Text="Select" VerticalOptions="Center" Clicked="DashboardViewRecordBtn_Clicked"/>
+        </StackLayout>
+    </Frame>
+
+    <Frame Grid.Row="2" Grid.Column="0" Padding="16" Margin="8" CornerRadius="8" BorderColor="Gray" BackgroundColor="Black">
+        <StackLayout Padding="5" Spacing="35" VerticalOptions="Center">
+            <Label Text="Drivers" FontSize="32" FontAttributes="Bold" />
+            <Button x:Name="DashboardViewDriverBtn" Text="Select" VerticalOptions="Center" Clicked="DashboardViewDriverBtn_Clicked"/>
+        </StackLayout>
+    </Frame>
+
+    <Frame Grid.Row="2" Grid.Column="1" Padding="16" Margin="8" CornerRadius="8" BorderColor="Gray" BackgroundColor="Black">
+        <StackLayout Padding="5" Spacing="35" VerticalOptions="Center">
+            <Label Text="About" FontSize="32" FontAttributes="Bold" />
+            <Button x:Name="DashboardViewInfoBtn" Text="Select" VerticalOptions="Center" Clicked="DashboardViewInfoBtn_Clicked"/>
+        </StackLayout>
+    </Frame>
+
+    <Button x:Name="LogoutBtn" Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Center" WidthRequest="450" Text="Sign out" Clicked="LogoutBtn_Clicked"/>
+    </Grid>
+
+</ContentPage>

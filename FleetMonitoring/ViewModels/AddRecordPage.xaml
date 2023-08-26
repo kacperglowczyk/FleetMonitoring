@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FleetMonitoring.ViewModels.AddRecordPage"
+             Title="AddRecordPage">
+      <Grid
+        RowSpacing="25"
+        ColumnSpacing="25"
+        Padding="30,0"
+        BackgroundColor="Black"
+        WidthRequest="1000"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="300" />
+        <RowDefinition Height="300" />
+        <RowDefinition Height="50" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="450" />
+        <ColumnDefinition Width="450" />
+    </Grid.ColumnDefinitions>
+
+    <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Text="Registering trip" FontSize="38" />
+
+    <Frame Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Padding="16" Margin="8" CornerRadius="8" BorderColor="Black" BackgroundColor="Black">
+        <StackLayout Padding="5" Spacing="35">
+            <Label Text="Date:" FontSize="24" FontAttributes="Bold" />
+            <Label Text="Driver:" FontSize="24" FontAttributes="Bold" />
+            <Label Text="Road driven:" FontSize="24" FontAttributes="Bold" />            
+        </StackLayout>
+    </Frame>
+
+    <Frame Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Padding="16" Margin="8" CornerRadius="8" BorderColor="Black" BackgroundColor="Black">
+        <StackLayout Padding="5" Spacing="25">
+            <DatePicker x:Name="DateInput" Format="D" />
+            <Entry x:Name="DriverInput" Placeholder="Input driver's ID:" />            
+            <Entry x:Name="TripInput" Placeholder="Input driver's trip:" />
+        </StackLayout>
+    </Frame>
+
+    <Button x:Name="Back" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" WidthRequest="450" Text="Back" Clicked="Back_Clicked"/>
+    <Button x:Name="SaveRecordBtn" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" WidthRequest="450" Text="Done" Clicked="SaveRecordBtn_Clicked"/>
+</Grid>
+</ContentPage>
