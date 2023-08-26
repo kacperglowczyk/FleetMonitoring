@@ -7,8 +7,7 @@ namespace FleetMonitoring.Models
     {
         public int Id { get; set; }
         public string DriverName { get; set; }
-        public string DriverSurname { get; set; }
-        public string RoadDriven { get; set; }
+        public string DriverSurname { get; set; }        
     }
 
     public class DriverContext : DbContext
@@ -36,10 +35,7 @@ namespace FleetMonitoring.Models
             modelBuilder.Entity<Driver>()
                 .Property(d => d.DriverSurname)
                 .IsRequired();
-
-            modelBuilder.Entity<Driver>()
-                .Property(d => d.RoadDriven)
-                .IsRequired();
+           
         }
     }
 

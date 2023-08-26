@@ -57,4 +57,10 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="ViewModels\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="ViewModels\" />
+	</ItemGroup>
 </Project>
