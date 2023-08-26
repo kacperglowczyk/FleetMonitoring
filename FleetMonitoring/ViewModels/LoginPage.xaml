@@ -3,34 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FleetMonitoring.ViewModels.LoginPage"
              Title="LoginPage">
-     <VerticalStackLayout
+    <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center"
-            BackgroundColor="Black">
+            BackgroundColor="Gray">
 
             <Label
-                Text="Signing in"
+                Text="Logowanie"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
             <Entry
                 x:Name="FormLogin"
-                Placeholder="Login"
+                Placeholder="login"
                 WidthRequest="250"
                 HorizontalOptions="Center"/>
 
             <Entry
                 x:Name="FormPassword"
                 IsPassword="True"
-                Placeholder="Password"
+                Placeholder="hasło"
                 WidthRequest="250"
                 HorizontalOptions="Center"/>
 
             <Button
                 x:Name="FormLoginBtn"
-                Text="Sign in"
+                Text="Zaloguj się"
                 HorizontalOptions="Center"
                 Clicked="FormLoginBtn_Clicked"/>
 
